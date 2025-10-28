@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+body {
+  color: #daf1de;
+  font-family: "merienda", sans-serif;
+  scroll-behavior: smooth;
+  /* Use the original darker green as the solid page background */
+  background-color: #0b2b26;
+}
+
+/* Blob / wave motion for the new MotionBackground component */
+@keyframes blobFloat1 {
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-18px) scale(1.02); opacity: 0.85; }
+  100% { transform: translateY(0) scale(1); opacity: 0.6; }
+}
+
+@keyframes blobFloat2 {
+  0% { transform: translateX(0) scale(1); opacity: 0.5; }
+  50% { transform: translateX(18px) scale(1.03); opacity: 0.85; }
+  100% { transform: translateX(0) scale(1); opacity: 0.5; }
+}
+
+.animate-blob-1 { animation: blobFloat1 10s ease-in-out infinite; }
+.animate-blob-2 { animation: blobFloat2 12s ease-in-out infinite; }
+
+/* subtle overlay shader for depth */
+.motion-shader { position:absolute; inset:0; background: radial-gradient(ellipse at 10% 10%, rgba(142,182,155,0.04), transparent 10%), radial-gradient(ellipse at 90% 90%, rgba(22,56,50,0.06), transparent 20%); pointer-events: none; }
+
+/* SVG wave animations for MotionBackground */
+@keyframes wave-1 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-15%); }
+  100% { transform: translateX(0); }
+}
+@keyframes wave-2 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10%); }
+  100% { transform: translateX(0); }
+}
+@keyframes wave-3 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-8%); }
+  100% { transform: translateX(0); }
+}
+
+.wave-anim-1 { animation: wave-1 20s ease-in-out infinite; transform-origin: center; }
+.wave-anim-2 { animation: wave-2 26s ease-in-out infinite; transform-origin: center; }
+.wave-anim-3 { animation: wave-3 34s ease-in-out infinite; transform-origin: center; }
+
+/* Accessibility: prefer-reduced-motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .wave-anim-1, .wave-anim-2, .wave-anim-3, .animate-blob-1, .animate-blob-2 { animation: none !important; }
+}

@@ -62,10 +62,9 @@ const AboutSection = () => {
           transition={{ duration: 0.8, delay: 0.28 }}
         >
           Hi! I’m <span className="text-[#8eb69b] font-semibold">Tehilah</span>, a passionate developer who
-          loves blending elegant design with solid functionality. I’m all about
-          building interactive, performance-focused web experiences that feel
-          alive. When I’m not coding, I’m probably exploring new ideas, sketching
-          UI concepts, or stargazing ✨.
+          loves building interactive, performance-focused web experiences with React, Next.js, and Tailwind CSS. 
+          I love exploring AI-agent tooling in Python alongside frontend work. 
+          When I'm not coding, I'm sketching UI concepts or exploring new ideas✨.
         </motion.p>
 
         <motion.div

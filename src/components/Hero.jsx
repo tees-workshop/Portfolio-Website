@@ -17,7 +17,7 @@ const HeroSection = () => {
           Hi, I’m <span className="text-[#8eb69b]">Tehilah</span>
         </h1>
         <p className="text-lg md:text-xl text-[#daf1de]/90 font-light">
-          Frontend Developer • Digital Marketer • Creative Coder • Data Ethusiast 
+          Frontend Developer • Digital Marketer • Creative Coder • AI Tools Builder
         </p>
       </motion.div>
 

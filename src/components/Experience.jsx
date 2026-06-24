@@ -12,7 +12,7 @@ const Experience = () => {
       role: 'Digital Marketer',
       start: 'Feb 2025',
       end: 'Sep 2025',
-      bullets: ['Supported digital campaigns and analytics', 'Assisted with content and growth initiatives'],
+      bullets: ['Managed social media accounts and email marketing campaigns ', 'Supported digital campaigns and analytics', 'Assisted with content and growth initiatives'],
     },
     // Removed other demo roles per request; only Elonatech entries remain.
   ];

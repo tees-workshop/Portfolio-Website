@@ -49,9 +49,10 @@ const projects = [
     title: "TaskMind",
     type: "AI tooling · 2026",
     description:
-      "A Python CLI-based AI agent that turns a high-level goal into structured tasks and subtasks, with progress saved across sessions.",
+      "A Python command-line productivity agent that turns plain-English goals into actionable subtasks, scores and prioritizes tasks, guides interactive execution, and preserves session data between runs.",
     tech: ["Python", "LLMs", "CLI"],
     repo: "https://github.com/tees-workshop/TaskMind",
+    caseStudy: "/work/taskmind",
     symbol: "T",
     tone: "peach",
   },
@@ -219,6 +220,7 @@ function Projects() {
               </div>
               <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
                 <a className="project-link" href={project.repo} target="_blank" rel="noreferrer">View code <Github size={14} /></a>
+                {"caseStudy" in project && project.caseStudy && <a className="project-link" href={project.caseStudy}>Read case study <ArrowUpRight size={14} /></a>}
                 {"caseStudy" in project && project.caseStudy && <a className="project-link" href={project.caseStudy}>Read case study <ArrowUpRight size={14} /></a>}\n                {"caseStudy" in project && project.caseStudy && <a className="project-link" href={project.caseStudy}>Read case study <ArrowUpRight size={14} /></a>}
                 {"live" in project && project.live && <a className="project-link" href={project.live} target="_blank" rel="noreferrer">Live project <ExternalLink size={14} /></a>}
               </div>

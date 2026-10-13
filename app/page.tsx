@@ -47,7 +47,7 @@ const experience = [
 ];
 
 const skills = ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "HTML & CSS", "Git & GitHub", "Python", "Responsive UI", "Content strategy", "AI tools"];
-const links = [["About", "#about"], ["Work", "#work"], ["Experience", "#experience"], ["Contact", "#contact"]];
+const links = [["About", "#about"], ["Work", "#work"], ["Experience", "#experience"], ["Certifications", "#certifications"], ["Contact", "#contact"]];
 
 function ThemeToggle() {
   const [dark, setDark] = useState(false);
@@ -149,6 +149,35 @@ function Experience() {
   </div></section>;
 }
 
+
+function Certifications() {
+  const certificates = [
+    {
+      title: "HTML and CSS in Depth",
+      issuer: "Meta · Coursera",
+      file: "/certificates/Coursera%20%20Online%20Courses%20%26%20Credentials%20From%20Top%20Educators.%20Join%20for%20Free%20%20Coursera.pdf",
+      description: "Course certificate",
+    },
+    {
+      title: "Introduction to Cybersecurity",
+      issuer: "Cisco",
+      file: "/certificates/Introduction_to_Cybersecurity_Badge20240802-7-gakcb9.pdf",
+      description: "Course badge",
+    },
+  ];
+
+  return <section className="section work-section" id="certifications"><div className="container">
+    <Reveal><SectionHeading eyebrow="Learning & growth" title="Certifications." copy="A few milestones from my continued learning journey." /></Reveal>
+    <div className="project-grid">{certificates.map((certificate, index) => <Reveal key={certificate.title} delay={index * .08} className="project-reveal"><article className="project-card project-lavender">
+      <div className="project-card-body">
+        <div className="project-top"><span className="project-number">CERTIFICATE / 0{index + 1}</span><span className="project-icon"><GraduationCap size={19} /></span></div>
+        <span className="mini-label">{certificate.issuer}</span><h3>{certificate.title}</h3><p>{certificate.description}</p>
+        <div className="project-links"><a className="project-link" href={certificate.file} target="_blank" rel="noreferrer">View certificate <ExternalLink size={14} /></a></div>
+      </div>
+    </article></Reveal>)}</div>
+  </div></section>;
+}
+
 function Contact() {
   const [name, setName] = useState(""); const [email, setEmail] = useState(""); const [message, setMessage] = useState("");
   function handleSubmit(event: FormEvent<HTMLFormElement>) { event.preventDefault(); const subject = encodeURIComponent("Portfolio enquiry from " + name); const body = encodeURIComponent("From: " + name + "\nReply to: " + email + "\n\n" + message); window.location.href = "mailto:okhiriatehilah@gmail.com?subject=" + subject + "&body=" + body; }
@@ -168,7 +197,7 @@ export default function HomePage() {
     window.addEventListener("mousemove", onMove, { passive: true });
     return () => window.removeEventListener("mousemove", onMove);
   }, []);
-  return <div className="site-shell"><Header /><main><Hero /><Ticker /><About /><Projects /><Experience /><Contact /></main>
+  return <div className="site-shell"><Header /><main><Hero /><Ticker /><About /><Projects /><Experience /><Certifications /><Contact /></main>
     <footer className="container footer"><span>© {new Date().getFullYear()} Okhiria Tehilah. Made with curiosity.</span><div className="footer-links"><a href="https://github.com/tees-workshop" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="https://www.linkedin.com/in/tehilah-okhiria" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="#home">Back to top ↑</a></div></footer>
   </div>;
 }

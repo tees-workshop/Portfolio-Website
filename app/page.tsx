@@ -70,7 +70,19 @@ function Header() {
   const [open, setOpen] = useState(false);
   return <header className="nav-wrap"><div className="container">
     <nav className="nav" aria-label="Main navigation">
-      <a className="brand" href="#home" aria-label="Tehilah home"><span className="brand-mark">T.</span><span>tehilah okhiria<span style={{ color: "var(--accent)" }}>.</span></span></a>
+     
+<a className="brand" href="#home" aria-label="Tehilah home">
+  <img
+    src="/icon.png"
+    alt=""
+    className="brand-mark"
+  />
+  <span>
+    tehilah okhiria
+    <span style={{ color: "var(--accent)" }}>.</span>
+  </span>
+</a>
+
       <div className="nav-links">{links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</div>
       <div className="nav-actions"><ThemeToggle /><a className="button nav-cta" href="#contact">Let&apos;s talk <ArrowUpRight size={15} /></a><button className="icon-button menu-button" type="button" onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"}>{open ? <X size={17} /> : <Menu size={17} />}</button></div>
     </nav>

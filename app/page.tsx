@@ -6,7 +6,7 @@ import {
   Mail, Menu, Moon, Send, Sparkles, Sun, X, GraduationCap, BrainCircuit,
   BriefcaseBusiness, MoveUpRight
 } from "lucide-react";
-import { useEffect, useState, type CSSProperties, type FormEvent, type MouseEvent } from "react";
+import { useEffect, useState, type CSSProperties, type FormEvent, type ReactNode } from "react";
 
 const projects = [
   {
@@ -78,7 +78,7 @@ function Header() {
   </div></header>;
 }
 
-function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
   const reduceMotion = useReducedMotion();
   return <motion.div className={className} initial={reduceMotion ? false : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.14 }} transition={{ duration: reduceMotion ? 0 : 0.65, delay, ease: [0.22, 1, 0.36, 1] }}>{children}</motion.div>;
 }
@@ -89,7 +89,6 @@ function SectionHeading({ eyebrow, title, copy }: { eyebrow: string; title: stri
 
 function Hero() {
   const reduceMotion = useReducedMotion();
-  const words = ["Thoughtful", "human-centred", "curious"];
   return <section className="hero" id="home"><div className="hero-glow" aria-hidden="true" />
     <div className="container hero-grid">
       <div className="hero-copy-column">

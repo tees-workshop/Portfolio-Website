@@ -78,7 +78,7 @@ function Header() {
     className="brand-mark"
   />
   <span>
-    tehilah okhiria
+    Okhiria Tehilah 
     <span style={{ color: "var(--accent)" }}>.</span>
   </span>
 </a>
@@ -106,7 +106,7 @@ function Hero() {
       <div className="hero-copy-column">
         <motion.span className="availability" initial={reduceMotion ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5 }}><span className="status-dot" /> Open to opportunities & collaborations</motion.span>
         <h1 className="hero-title"><motion.span className="title-line" initial={reduceMotion ? false : { opacity: 0, y: 45 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: .08 }}>Curious mind.</motion.span><motion.span className="title-line" initial={reduceMotion ? false : { opacity: 0, y: 45 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: .2 }}><span className="accent-word">Thoughtful</span> builder.</motion.span></h1>
-        <motion.p className="hero-copy" initial={reduceMotion ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6, delay: .36 }}>I&apos;m Tehilah — a Computer Science student and developer turning ideas into useful, human-centred digital experiences.</motion.p>
+        <motion.p className="hero-copy" initial={reduceMotion ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6, delay: .36 }}>I&apos;m Tehilah — a Computer Science graduate, a front-end developer and a product manager who loves turning ideas into useful, human-centred digital experiences.</motion.p>
         <motion.div className="hero-actions" initial={reduceMotion ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .55, delay: .48 }}><a className="button" href="#work">Explore my work <ArrowDownRight size={16} /></a><a className="button secondary" href="#contact">Get in touch <ArrowUpRight size={15} /></a></motion.div>
         <div className="hero-note"><span className="note-line" /> Building with curiosity. Learning by doing.</div>
       </div>
@@ -127,7 +127,7 @@ function Ticker() {
 function About() {
   return <section className="section" id="about"><div className="container about-grid">
     <Reveal><span className="eyebrow">A bit about me</span><h2 className="section-title">Tech is the tool.<br /><span className="serif-italic">People are the point.</span></h2><div className="about-illustration"><span className="about-sun" /><span className="about-shape shape-a" /><span className="about-shape shape-b" /><span className="about-stamp">CURIOUS<br />BY NATURE</span><Sparkles size={27} /></div></Reveal>
-    <Reveal delay={.12}><div className="about-note"><p>I&apos;m a Computer Science undergraduate growing my craft across frontend development, software engineering, and emerging AI tools. I enjoy the mix of logic and creativity that comes with taking a rough idea and turning it into something people can use.</p><p>Outside the code editor, I&apos;ve explored digital communications, content planning, and community leadership. Those experiences shape how I think about the people on the other side of every interface.</p><div className="about-facts"><div className="fact"><strong>Build</strong><span>Responsive web experiences and interfaces</span></div><div className="fact"><strong>Explore</strong><span>AI tools and practical problem-solving</span></div><div className="fact"><strong>Connect</strong><span>Communities, communication, collaboration</span></div></div></div></Reveal>
+    <Reveal delay={.12}><div className="about-note"><p>I&apos;m a Computer Science graduate growing my craft across frontend development, product management, software engineering, and emerging AI tools. I enjoy the mix of logic and creativity that comes with taking a rough idea and turning it into something people can use.</p><p>Outside the code editor, I&apos;ve explored digital communications, content planning, and community leadership. Those experiences shape how I think about the people on the other side of every interface.</p><div className="about-facts"><div className="fact"><strong>Build</strong><span>Responsive web experiences and interfaces</span></div><div className="fact"><strong>Explore</strong><span>AI tools and practical problem-solving</span></div><div className="fact"><strong>Connect</strong><span>Communities, communication, collaboration</span></div></div></div></Reveal>
   </div></section>;
 }
 
@@ -169,6 +169,6 @@ export default function HomePage() {
     return () => window.removeEventListener("mousemove", onMove);
   }, []);
   return <div className="site-shell"><Header /><main><Hero /><Ticker /><About /><Projects /><Experience /><Contact /></main>
-    <footer className="container footer"><span>© {new Date().getFullYear()} Tehilah Okhiria. Made with curiosity.</span><div className="footer-links"><a href="https://github.com/tees-workshop" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="https://www.linkedin.com/in/tehilah-okhiria" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="#home">Back to top ↑</a></div></footer>
+    <footer className="container footer"><span>© {new Date().getFullYear()} Okhiria Tehilah. Made with curiosity.</span><div className="footer-links"><a href="https://github.com/tees-workshop" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="https://www.linkedin.com/in/tehilah-okhiria" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="#home">Back to top ↑</a></div></footer>
   </div>;
 }

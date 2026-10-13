@@ -156,23 +156,28 @@ function Certifications() {
       title: "HTML and CSS in Depth",
       issuer: "Meta · Coursera",
       file: "/certificates/Coursera%20%20Online%20Courses%20%26%20Credentials%20From%20Top%20Educators.%20Join%20for%20Free%20%20Coursera.pdf",
-      description: "Course certificate",
     },
     {
       title: "Introduction to Cybersecurity",
       issuer: "Cisco",
       file: "/certificates/Introduction_to_Cybersecurity_Badge20240802-7-gakcb9.pdf",
-      description: "Course badge",
     },
   ];
 
   return <section className="section work-section" id="certifications"><div className="container">
-    <Reveal><SectionHeading eyebrow="Learning & growth" title="Certifications." copy="A few milestones from my continued learning journey." /></Reveal>
+    <Reveal><SectionHeading eyebrow="Learning & growth" title="Certifications." copy="A few milestones from my continued learning journey. Browse each certificate below." /></Reveal>
     <div className="project-grid">{certificates.map((certificate, index) => <Reveal key={certificate.title} delay={index * .08} className="project-reveal"><article className="project-card project-lavender">
       <div className="project-card-body">
         <div className="project-top"><span className="project-number">CERTIFICATE / 0{index + 1}</span><span className="project-icon"><GraduationCap size={19} /></span></div>
-        <span className="mini-label">{certificate.issuer}</span><h3>{certificate.title}</h3><p>{certificate.description}</p>
-        <div className="project-links"><a className="project-link" href={certificate.file} target="_blank" rel="noreferrer">View certificate <ExternalLink size={14} /></a></div>
+        <span className="mini-label">{certificate.issuer}</span><h3>{certificate.title}</h3>
+        <iframe
+          className="certificate-preview"
+          src={certificate.file}
+          title={certificate.title + " certificate preview"}
+          loading="lazy"
+          style={{ display: "block", width: "100%", height: 420, border: "1px solid var(--border)", borderRadius: 12, background: "white" }}
+        />
+        <div className="project-links"><a className="project-link" href={certificate.file} target="_blank" rel="noreferrer">Open full certificate <ExternalLink size={14} /></a></div>
       </div>
     </article></Reveal>)}</div>
   </div></section>;

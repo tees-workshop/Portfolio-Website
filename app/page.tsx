@@ -178,7 +178,7 @@ function Certifications() {
     },
     {
       title: "Launchpad to Fundamental Questions of AI - Part 4",
-      issuer: "ATINGI · YOMA"
+      issuer: "ATINGI · YOMA",
       image: "/certificates/TehilahOkhiria%20-%20Launchpad%20to%20Fundamental%20Questions%20of%20Artificial%20Intelligence%20-Part%204%20Opportunities%20and%20Outlook_page-0001.jpg",
       description: "Opportunities and outlook",
     },

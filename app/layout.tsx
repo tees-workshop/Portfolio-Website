@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tehilah Okhiria — Developer & Creative Technologist",
+  title: "Tehilah Okhiria - Developer & Creative Technologist",
   description:
     "The portfolio of Tehilah Okhiria: software development, thoughtful digital experiences, and projects built with curiosity.",
   metadataBase: new URL("https://portfolio-website-seven-blond-50.vercel.app"),

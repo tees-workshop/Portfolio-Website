@@ -279,7 +279,7 @@ function Contact() {
     event.preventDefault();
     const subject = encodeURIComponent("Portfolio enquiry from " + name);
     const body = encodeURIComponent("From: " + name + "\nReply to: " + email + "\n\n" + message);
-    window.location.href = "mailto:tehilahokhiria@gmail.com?subject=" + subject + "&body=" + body;
+    window.location.href = "mailto:?subject=" + subject + "&body=" + body;
   }
 
   return (
@@ -291,7 +291,7 @@ function Contact() {
             <h2>Let&apos;s make something meaningful.</h2>
             <p>Have a role, a collaboration, or an interesting problem to solve? I&apos;d love to hear what you&apos;re working on.</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 25 }}>
-              <a className="button" style={{ background: "var(--lime)", borderColor: "var(--lime)", color: "#20211f" }} href="mailto:tehilahokhiria@gmail.com">Email me <Mail size={15} /></a>
+              <a className="button" style={{ background: "var(--lime)", borderColor: "var(--lime)", color: "#20211f" }} href="mailto:">Email me <Mail size={15} /></a>
               <a className="button secondary" style={{ borderColor: "rgba(255,255,255,.45)", color: "white" }} href="https://github.com/tees-workshop" target="_blank" rel="noreferrer">GitHub <Github size={15} /></a>
             </div>
           </div>

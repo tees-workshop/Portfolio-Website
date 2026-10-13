@@ -61,9 +61,10 @@ const projects = [
     title: "Novo — Frontend collaboration",
     type: "Professional project",
     description:
-      "Frontend contributions to a multi-page business website, helping shape responsive interfaces and reusable UI across service pages.",
+      "Contributed frontend development across the website’s pages, building and refining responsive layouts, navigation, and service-page interfaces as part of a collaborative team project.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     live: "https://novo-index-page-re-do.vercel.app/",
+    caseStudy: "/work/novo",
     symbol: "N",
     tone: "blue",
   },
@@ -220,6 +221,7 @@ function Projects() {
               </div>
               <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
                 <a className="project-link" href={project.repo} target="_blank" rel="noreferrer">View code <Github size={14} /></a>
+                {"caseStudy" in project && project.caseStudy && <a className="project-link" href={project.caseStudy}>Read case study <ArrowUpRight size={14} /></a>}
                 {"caseStudy" in project && project.caseStudy && <a className="project-link" href={project.caseStudy}>Read case study <ArrowUpRight size={14} /></a>}
                 {"caseStudy" in project && project.caseStudy && <a className="project-link" href={project.caseStudy}>Read case study <ArrowUpRight size={14} /></a>}\n                {"caseStudy" in project && project.caseStudy && <a className="project-link" href={project.caseStudy}>Read case study <ArrowUpRight size={14} /></a>}
                 {"live" in project && project.live && <a className="project-link" href={project.live} target="_blank" rel="noreferrer">Live project <ExternalLink size={14} /></a>}

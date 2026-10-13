@@ -99,7 +99,7 @@ function Hero() {
         <div className="hero-note"><span className="note-line" /> Building with curiosity. Learning by doing.</div>
       </div>
       <motion.aside className="portrait-card" initial={reduceMotion ? false : { opacity: 0, scale: .94, rotate: 2 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: .85, delay: .18, ease: [0.22, 1, .36, 1] }} aria-label="Illustrated portrait placeholder">
-        <div className="portrait-image-wrap"><img src="/images/Profile-Pic.jpeg" alt="Stylised illustrated portrait placeholder; replace with Tehilah's own photo" className="portrait-image" /><span className="portrait-sticker">HELLO,<br />I&apos;M TEE <Sparkles size={14} /></span></div>
+        <div className="portrait-image-wrap"><img src="/images/profile-pic.jpeg" alt="Stylised illustrated portrait placeholder; replace with Tehilah's own photo" className="portrait-image" /><span className="portrait-sticker">HELLO,<br />I&apos;M TEE <Sparkles size={14} /></span></div>
         <div className="portrait-caption"><span className="mini-label">Developer · Creative thinker</span><span className="portrait-caption-mark">✳</span></div>
         <span className="portrait-orbit orbit-one" aria-hidden="true" /><span className="portrait-orbit orbit-two" aria-hidden="true" />
       </motion.aside>

@@ -160,7 +160,7 @@ function Certifications() {
     },
     {
       title: "Introduction to Cybersecurity",
-      issuer: "Cisco",
+      issuer: "Cisco Networking Academy",
       image: "/certificates/Introduction_to_Cybersecurity_Badge20240802-7-gakcb9_page-0001.jpg",
       description: "Course badge",
     },
@@ -171,44 +171,44 @@ function Certifications() {
       description: "Web design certificate",
     },
     {
-      title: "Launchpad to Fundamental Questions of AI — Part 3",
-      issuer: "Artificial Intelligence",
+      title: "Launchpad to Fundamental Questions of AI - Part 3",
+      issuer: "ATINGI · YOMA",
       image: "/certificates/TehilahOkhiria%20-%20Launchpad%20to%20Fundamental%20Questions%20of%20Artificial%20Intelligence%20-Part%203Risks_page-0001.jpg",
       description: "Risks of artificial intelligence",
     },
     {
-      title: "Launchpad to Fundamental Questions of AI — Part 4",
-      issuer: "Artificial Intelligence",
+      title: "Launchpad to Fundamental Questions of AI - Part 4",
+      issuer: "ATINGI · YOMA"
       image: "/certificates/TehilahOkhiria%20-%20Launchpad%20to%20Fundamental%20Questions%20of%20Artificial%20Intelligence%20-Part%204%20Opportunities%20and%20Outlook_page-0001.jpg",
       description: "Opportunities and outlook",
     },
     {
       title: "How to Be a Successful Online Learner",
-      issuer: "Online learning",
+      issuer: "ATINGI · YOMA",
       image: "/certificates/TehilahOkhiria-%20How%20to%20be%20a%20successful%20online%20learner_page-0001.jpg",
       description: "Learning and development certificate",
     },
     {
       title: "Introduction to Modern AI",
-      issuer: "Artificial Intelligence",
+      issuer: "CISCO Networking Academy",
       image: "/certificates/TehilahOkhiria-%20Introduction%20to%20Modern%20AI_page-0001.jpg",
       description: "Course certificate",
     },
     {
-      title: "Certificate 2",
-      issuer: "Additional certificate",
+      title: "Introduction to Data Literacy",
+      issuer: "DataCamp",
       image: "/certificates/certificate%202_page-0001.jpg",
       description: "Certificate of completion",
     },
     {
-      title: "Certificate 3",
-      issuer: "Additional certificate",
+      title: "Understanding Data Engineering",
+      issuer: "DataCamp",
       image: "/certificates/certificate%203_page-0001.jpg",
       description: "Certificate of completion",
     },
     {
-      title: "Certificate",
-      issuer: "Additional certificate",
+      title: "Introduction to AI Agents",
+      issuer: "DataCamp",
       image: "/certificates/certificate_page-0001.jpg",
       description: "Certificate of completion",
     },
@@ -229,7 +229,6 @@ function Certifications() {
             style={{ display: "block", width: "100%", height: "auto", maxHeight: 440, objectFit: "contain", objectPosition: "top", border: "1px solid var(--border)", borderRadius: 12, background: "white", marginTop: 16 }}
           />
         </a>
-        <div className="project-links"><a className="project-link" href={certificate.image} target="_blank" rel="noreferrer">View full image <ExternalLink size={14} /></a></div>
       </div>
     </article></Reveal>)}</div>
   </div></section>;

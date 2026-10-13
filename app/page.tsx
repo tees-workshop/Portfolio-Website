@@ -333,7 +333,7 @@ export default function HomePage() {
       </main>
       <footer className="container footer">
         <span>© {new Date().getFullYear()} Tehilah Okhiria. Made with curiosity.</span>
-        <div className="footer-links"><a href="https://github.com/tees-workshop" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="#home">Back to top ↑</a></div>
+        <div className="footer-links"><a href="https://github.com/tees-workshop" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="https://www.linkedin.com/in/tehilah-okhiria" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} style={{ display: "inline" }} /></a><a href="#home">Back to top ↑</a></div>
       </footer>
     </div>
   );

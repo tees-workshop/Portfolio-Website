@@ -24,9 +24,10 @@ const projects = [
     title: "EduMate",
     type: "Learning experience",
     description:
-      "A student-focused exam-readiness website where learners upload their study materials, take short quizzes generated from that content, and use the results to assess whether they are ready for an upcoming exam.",
+      "An AI-assisted study tool that turns students’ uploaded learning materials into short, content-based quizzes, helping them check their understanding and gauge exam readiness.",
     tech: ["Education", "Web development"],
     repo: "https://github.com/tees-workshop/EduMate",
+    caseStudy: "/work/edumate",
     symbol: "E",
     tone: "lavender",
   },
@@ -216,7 +217,7 @@ function Projects() {
                 <div className="tags">{project.tech.map((tech) => <span className="tag" key={tech}>{tech}</span>)}</div>
               </div>
               <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
-                <a className="project-link" href={project.repo} target="_blank" rel="noreferrer">View code <Github size={14} /></a>
+                <a className="project-link" href={project.repo} target="_blank" rel="noreferrer">View code <Github size={14} /></a>\n                {"caseStudy" in project && project.caseStudy && <a className="project-link" href={project.caseStudy}>Read case study <ArrowUpRight size={14} /></a>}
                 {"live" in project && project.live && <a className="project-link" href={project.live} target="_blank" rel="noreferrer">Live project <ExternalLink size={14} /></a>}
               </div>
             </motion.article>

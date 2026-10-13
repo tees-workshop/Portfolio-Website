@@ -26,10 +26,6 @@
   --shadow: 0 22px 70px rgba(0, 0, 0, 0.22);
 }
 
-@theme inline {
-  --font-sans: var(--font-inter);
-}
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 body {

@@ -155,12 +155,14 @@ function Certifications() {
     {
       title: "HTML and CSS in Depth",
       issuer: "Meta · Coursera",
+      image: "/certificates/Coursera%20%20Online%20Courses%20%26%20Credentials%20From%20Top%20Educators.%20Join%20for%20Free%20%20Coursera_page-0001.jpg",
       file: "/certificates/Coursera%20%20Online%20Courses%20%26%20Credentials%20From%20Top%20Educators.%20Join%20for%20Free%20%20Coursera.pdf",
       description: "Course certificate",
     },
     {
       title: "Introduction to Cybersecurity",
       issuer: "Cisco",
+      image: "/certificates/Introduction_to_Cybersecurity_Badge20240802-7-gakcb9_page-0001.jpg",
       file: "/certificates/Introduction_to_Cybersecurity_Badge20240802-7-gakcb9.pdf",
       description: "Course badge",
     },
@@ -172,20 +174,16 @@ function Certifications() {
       <div className="project-card-body">
         <div className="project-top"><span className="project-number">CERTIFICATE / 0{index + 1}</span><span className="project-icon"><GraduationCap size={19} /></span></div>
         <span className="mini-label">{certificate.issuer}</span><h3>{certificate.title}</h3><p>{certificate.description}</p>
-        <div className="project-links"><a className="project-link" href={certificate.file} target="_blank" rel="noreferrer">View certificate <ExternalLink size={14} /></a></div>
-    <Reveal><SectionHeading eyebrow="Learning & growth" title="Certifications." copy="A few milestones from my continued learning journey. Browse each certificate below." /></Reveal>
-    <div className="project-grid">{certificates.map((certificate, index) => <Reveal key={certificate.title} delay={index * .08} className="project-reveal"><article className="project-card project-lavender">
-      <div className="project-card-body">
-        <div className="project-top"><span className="project-number">CERTIFICATE / 0{index + 1}</span><span className="project-icon"><GraduationCap size={19} /></span></div>
-        <span className="mini-label">{certificate.issuer}</span><h3>{certificate.title}</h3>
-        <iframe
-          className="certificate-preview"
-          src={certificate.file}
-          title={certificate.title + " certificate preview"}
-          loading="lazy"
-          style={{ display: "block", width: "100%", height: 420, border: "1px solid var(--border)", borderRadius: 12, background: "white" }}
-        />
-        <div className="project-links"><a className="project-link" href={certificate.file} target="_blank" rel="noreferrer">Open full certificate <ExternalLink size={14} /></a></div>
+        <a href={certificate.file} target="_blank" rel="noreferrer" aria-label={"Open original " + certificate.title + " PDF"}>
+          <img
+            className="certificate-image"
+            src={certificate.image}
+            alt={certificate.title + " certificate"}
+            loading="lazy"
+            style={{ display: "block", width: "100%", height: "auto", maxHeight: 440, objectFit: "contain", objectPosition: "top", border: "1px solid var(--border)", borderRadius: 12, background: "white", marginTop: 16 }}
+          />
+        </a>
+        <div className="project-links"><a className="project-link" href={certificate.file} target="_blank" rel="noreferrer">View original PDF <ExternalLink size={14} /></a></div>
       </div>
     </article></Reveal>)}</div>
   </div></section>;

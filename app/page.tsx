@@ -220,7 +220,7 @@ function Projects() {
                 <div className="tags">{project.tech.map((tech) => <span className="tag" key={tech}>{tech}</span>)}</div>
               </div>
               <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
-                <a className="project-link" href={project.repo} target="_blank" rel="noreferrer">View code <Github size={14} /></a>
+                {"repo" in project && project.repo && <a className="project-link" href={project.repo} target="_blank" rel="noreferrer">View code <Github size={14} /></a>}
                 {"caseStudy" in project && project.caseStudy && <a className="project-link" href={project.caseStudy}>Read case study <ArrowUpRight size={14} /></a>}
                 {"live" in project && project.live && <a className="project-link" href={project.live} target="_blank" rel="noreferrer">Live project <ExternalLink size={14} /></a>}
               </div>

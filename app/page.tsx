@@ -24,7 +24,7 @@ const projects = [
     title: "EduMate",
     type: "Learning experience",
     description:
-      "An education-focused project exploring how thoughtful digital tools can make learning more approachable. Explore the repository for the implementation and current features.",
+      "A student-focused exam-readiness website where learners upload their study materials, take short quizzes generated from that content, and use the results to assess whether they are ready for an upcoming exam.",
     tech: ["Education", "Web development"],
     repo: "https://github.com/tees-workshop/EduMate",
     symbol: "E",

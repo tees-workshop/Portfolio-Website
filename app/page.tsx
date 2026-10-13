@@ -3,13 +3,10 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   ArrowDownRight,
-  ArrowRight,
   ArrowUpRight,
-  BriefcaseBusiness,
   Code2,
   ExternalLink,
   Github,
-  GraduationCap,
   Layers3,
   Mail,
   Menu,
@@ -19,7 +16,7 @@ import {
   Sun,
   X,
 } from "lucide-react";
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties, type FormEvent } from "react";
 
 const projects = [
   {
@@ -311,7 +308,7 @@ function Contact() {
   );
 }
 
-const fieldStyle: React.CSSProperties = {
+const fieldStyle: CSSProperties = {
   width: "100%",
   padding: "12px 13px",
   border: "1px solid rgba(255,255,255,.28)",

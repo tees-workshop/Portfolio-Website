@@ -227,7 +227,7 @@ function Projects() {
             </motion.article>
           ))}
         </div>
-        <p style={{ color: "var(--muted)", fontSize: 12, marginTop: 18 }}>Project descriptions are an initial draft; we&apos;ll verify each feature and your exact contribution before calling these final case studies.</p>
+        <p style={{ color: "var(--muted)", fontSize: 12, marginTop: 18 }}>Explore each case study for the project context, key features, and implementation details.</p>
       </div>
     </section>
   );

@@ -156,25 +156,71 @@ function Certifications() {
       title: "HTML and CSS in Depth",
       issuer: "Meta · Coursera",
       image: "/certificates/Coursera%20%20Online%20Courses%20%26%20Credentials%20From%20Top%20Educators.%20Join%20for%20Free%20%20Coursera_page-0001.jpg",
-      file: "/certificates/Coursera%20%20Online%20Courses%20%26%20Credentials%20From%20Top%20Educators.%20Join%20for%20Free%20%20Coursera.pdf",
       description: "Course certificate",
     },
     {
       title: "Introduction to Cybersecurity",
       issuer: "Cisco",
       image: "/certificates/Introduction_to_Cybersecurity_Badge20240802-7-gakcb9_page-0001.jpg",
-      file: "/certificates/Introduction_to_Cybersecurity_Badge20240802-7-gakcb9.pdf",
       description: "Course badge",
+    },
+    {
+      title: "30 Days of Web Design",
+      issuer: "Web design",
+      image: "/certificates/30%20DAYS%20OF%20WEB%20DESIGN%20CERTIFICATE_page-0001.jpg",
+      description: "Web design certificate",
+    },
+    {
+      title: "Launchpad to Fundamental Questions of AI — Part 3",
+      issuer: "Artificial Intelligence",
+      image: "/certificates/TehilahOkhiria%20-%20Launchpad%20to%20Fundamental%20Questions%20of%20Artificial%20Intelligence%20-Part%203Risks_page-0001.jpg",
+      description: "Risks of artificial intelligence",
+    },
+    {
+      title: "Launchpad to Fundamental Questions of AI — Part 4",
+      issuer: "Artificial Intelligence",
+      image: "/certificates/TehilahOkhiria%20-%20Launchpad%20to%20Fundamental%20Questions%20of%20Artificial%20Intelligence%20-Part%204%20Opportunities%20and%20Outlook_page-0001.jpg",
+      description: "Opportunities and outlook",
+    },
+    {
+      title: "How to Be a Successful Online Learner",
+      issuer: "Online learning",
+      image: "/certificates/TehilahOkhiria-%20How%20to%20be%20a%20successful%20online%20learner_page-0001.jpg",
+      description: "Learning and development certificate",
+    },
+    {
+      title: "Introduction to Modern AI",
+      issuer: "Artificial Intelligence",
+      image: "/certificates/TehilahOkhiria-%20Introduction%20to%20Modern%20AI_page-0001.jpg",
+      description: "Course certificate",
+    },
+    {
+      title: "Certificate 2",
+      issuer: "Additional certificate",
+      image: "/certificates/certificate%202_page-0001.jpg",
+      description: "Certificate of completion",
+    },
+    {
+      title: "Certificate 3",
+      issuer: "Additional certificate",
+      image: "/certificates/certificate%203_page-0001.jpg",
+      description: "Certificate of completion",
+    },
+    {
+      title: "Certificate",
+      issuer: "Additional certificate",
+      image: "/certificates/certificate_page-0001.jpg",
+      description: "Certificate of completion",
     },
   ];
 
   return <section className="section work-section" id="certifications"><div className="container">
     <Reveal><SectionHeading eyebrow="Learning & growth" title="Certifications." copy="A few milestones from my continued learning journey." /></Reveal>
-    <div className="project-grid">{certificates.map((certificate, index) => <Reveal key={certificate.title} delay={index * .08} className="project-reveal"><article className="project-card project-lavender">
+    <div className="project-grid">{certificates.map((certificate, index) => <Reveal key={certificate.title} delay={(index % 2) * .08} className="project-reveal"><article className="project-card project-lavender">
       <div className="project-card-body">
-        <div className="project-top"><span className="project-number">CERTIFICATE / 0{index + 1}</span><span className="project-icon"><GraduationCap size={19} /></span></div>
+        <div className="project-top"><span className="project-number">CERTIFICATE / {String(index + 1).padStart(2, "0")}</span><span className="project-icon"><GraduationCap size={19} /></span></div>
         <span className="mini-label">{certificate.issuer}</span><h3>{certificate.title}</h3><p>{certificate.description}</p>
-        <a href={certificate.file} target="_blank" rel="noreferrer" aria-label={"Open original " + certificate.title + " PDF"}>
+        <a href={certificate.image} target="_blank" rel="noreferrer" aria-label={"View full image of " + certificate.title}>
           <img
             className="certificate-image"
             src={certificate.image}
@@ -183,7 +229,7 @@ function Certifications() {
             style={{ display: "block", width: "100%", height: "auto", maxHeight: 440, objectFit: "contain", objectPosition: "top", border: "1px solid var(--border)", borderRadius: 12, background: "white", marginTop: 16 }}
           />
         </a>
-        <div className="project-links"><a className="project-link" href={certificate.file} target="_blank" rel="noreferrer">View original PDF <ExternalLink size={14} /></a></div>
+        <div className="project-links"><a className="project-link" href={certificate.image} target="_blank" rel="noreferrer">View full image <ExternalLink size={14} /></a></div>
       </div>
     </article></Reveal>)}</div>
   </div></section>;
